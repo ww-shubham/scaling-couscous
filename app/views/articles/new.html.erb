@@ -1,0 +1,29 @@
+
+<h1 id="header">Create new Article</h1>
+
+<div>
+
+  <%= form_for @article do |f| %>
+
+  <table class="table_without_border">
+
+    <tr>
+      <td class="column_with_width_defined"><%= f.label "Title" %></td>
+      <td><%= f.text_field :title %></td>
+    </tr>
+
+    <tr>
+      <td class="column_with_width_defined"><%= f.label "Text" %></td>
+      <td><%= f.text_area :text %></td>
+    </tr>
+
+    <tr>
+      <td class="column_with_width_defined"><%= f.submit "Submit", class: "nav_links" %></td>
+      <td><%= link_to "Back", articles_path, class: "nav_links" %></td>
+    </tr>
+
+  </table>
+
+  <% end %>
+
+</div>

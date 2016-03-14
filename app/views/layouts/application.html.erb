@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <title>Practice</title>
+</head>
+<body>
+
+  <div id="banner">
+    <%= image_tag "logo.png", size: "170x100", id: "logo_image" %>
+  </div>
+
+  <div id="article_body">
+    <%= yield %>
+  </div>
+
+  <br><br>
+
+  <div id="footer">
+    <p>Thanks for using!</p>
+  </div>
+
+</body>
+</html>

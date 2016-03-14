@@ -1,0 +1,5 @@
+.shared_header, .shared_footer {
+  height: 100px;
+  width: 100%;
+  background-color: red;
+}

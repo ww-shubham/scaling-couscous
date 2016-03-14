@@ -1,0 +1,39 @@
+
+<h1 id="header">Article</h1>
+
+<div>
+
+  <table class="table_without_border", id="show_article_table">
+    <tr>
+      <td class="column_with_width_defined">Title:</td>
+      <td><%= @article.title %></td>
+    </tr>
+
+    <tr>
+      <td class="column_with_width_defined">Details:</td>
+      <td><%= @article.text %></td>
+    </tr>
+
+    <tr>
+      <td class="column_with_width_defined">Average_Rating:</td>
+      <td><%= @article.calc_rating %></td>
+    </tr>
+  </table>
+
+</div>
+
+<h2 id="header">Comments:</h2>
+
+<% if @article.comments.length == 0 %>
+ <p>No comments found.</p>
+<% else %>
+<%= render @article.comments %>
+<% end %>
+
+<%= render "shared/comments_form"%>
+
+<br>
+
+<%= link_to "New Article", new_article_path, class: "nav_links" %>
+<%= link_to "Edit article", edit_article_path(@article), class: "nav_links" %>
+<%= link_to "Back", articles_path, class: "nav_links" %>

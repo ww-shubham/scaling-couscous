@@ -1,0 +1,27 @@
+<div class="comments_div">
+
+  <table class="comments_table">
+
+    <tr>
+      <td class="column_with_width_defined">Commenter:</td>
+      <td><%= comment.name %></td>
+    </tr>
+
+    <tr>
+      <td class="column_with_width_defined">Comment:</td>
+      <td><%= comment.comment %></td>
+    </tr>
+
+    <tr>
+      <td class="column_with_width_defined">Rating:</td>
+      <td><%= comment.rating %></td>
+    </tr>
+
+    <tr>
+      <td colspan="2"><%= link_to "Delete", [comment.article, comment], method: :delete, data: {confirm: "Are you sure?"}, class: "nav_links" %></td>
+    </tr>
+
+  </table>
+
+</div>
+<br>

@@ -1,0 +1,31 @@
+<div>
+
+  <h2 id="header">Add Comment</h2>
+  <%= form_for ([@article, @article.comments.build]) do |f| %>
+
+  <table class="table_without_border">
+
+    <tr>
+      <td class="column_with_width_defined"><%= f.label :Name %></td>
+      <td><%= f.text_field :name %></td>
+    </tr>
+
+    <tr>
+      <td class="column_with_width_defined"><%= f.label :Comment %></td>
+      <td><%= f.text_area :comment %></td>
+    </tr>
+
+    <tr>
+      <td class="column_with_width_defined"><%= f.label :Rate_Article %></td>
+      <td><%= f.select(:rating, [['1', 1],['2', 2],['3', 3],['4', 4],['5', 5]]) %></td>
+    </tr>
+
+    <tr>
+      <td colspan= "2"><%= f.submit :Submit, class: "nav_links" %></td>
+    </tr>
+
+  </table>
+
+  <% end %>
+
+</div>
